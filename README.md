@@ -5,6 +5,8 @@ Describe population estimate method
 > CIESIN used proportional allocation to distribute population data from subnational census data to the settlement extents.
 (CIESIN - https://ciesin.columbia.edu/data/hrsl/)
 
+<img src="img/HRSL1-tot.png" width=250 /> *HRSL - High resolution settlement layer*
+
 Image with the result. For our work the detail of those data very useful considering HRSL (pixel 30m per 30m), but absolutely inconsistence for the population estimated. Columbia university applied census data to hrsl.
 So we developed something very similar, but considering updated CENSUS data and weighting the result in order to give more detail.
 
