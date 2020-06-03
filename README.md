@@ -2,19 +2,37 @@
 
 Describe population estimate method
 
+### Data
+HRSL
+OSM buildings
+INE Census data
+Morphological areas
+
+### Existing population data
+There are two main sources for population data in the Greater Maputo.
+First of all there are available dataset of *INE - Instituto Nacional de Estatistica*. Open Data of the IV General Census of Population and Housing, 2017. The main problem for the dataset is the low resolution, infact the data are aggregated per province or for district (just for Maputo city).
+The second sources is *HRSL - High Resolution Settlement Layer*. This layer is made by Facebook using AI and 2016 satellite images to identify populated areas. Resolution of 30x30 meters whether or not there is a building. Then CIENIS process this data, with data from INE 2007 applying growth rate to estimate population per HRSL pixel.
+
 > CIESIN used proportional allocation to distribute population data from subnational census data to the settlement extents.
 (CIESIN - https://ciesin.columbia.edu/data/hrsl/)
 
-<img src="img/HRSL1-tot.PNG" width=250 /> *HRSL - High resolution settlement layer*
+Also this second sources has a very low resolution considering the scale we are dealing with.
 
-Problems:
+<img src="img/HRSL1-tot.PNG" width=250 />
+
+Moreover two problems:
 
 <p align="center" float="center">
 <img src="img/HRSL1-diff1.PNG" width=250 />
 <img src="img/HRSL1-diff2.PNG" width=250 />
 </p>
-
+No more resolution than INE
+<p align="center" float="center">
 <img src="img/HRSL1-dist1.PNG" width=250 />
+</p>
+Not correct boundaries (considering the working scale)
+
+### Estimate population method
 
 Image with the result. For our work the detail of those data very useful considering HRSL (pixel 30m per 30m), but absolutely inconsistence for the population estimated. Columbia university applied census data to hrsl.
 So we developed something very similar, but considering updated CENSUS data and weighting the result in order to give more detail.
