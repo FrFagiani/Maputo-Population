@@ -16,6 +16,8 @@ The second sources is *HRSL - High Resolution Settlement Layer*. This layer is m
 > CIESIN used proportional allocation to distribute population data from subnational census data to the settlement extents.
 (CIESIN - https://ciesin.columbia.edu/data/hrsl/)
 
+> Adjustments to match the census population with the UN estimates are applied at the national level. The UN estimate for a given country (or state/territory) is divided by the total census estimate of population for the given country. The resulting adjustment factor is multiplied by each administrative unit census value for the target year. This preserves the relative population totals across administrative units while matching the UN total.
+
 Also this second sources has a very low resolution considering the scale we are dealing with.
 
 <img src="img/HRSL1-tot.PNG" width=250 />
@@ -63,3 +65,5 @@ NO, following has no sense: Can I refine the data considering average people/bui
 Bonafilia, D., Kirsanov, D., Gill, J., & Sundram, J. (2019, April 09). Mapping the world to help aid workers, with weakly, semi-supervised learning. Retrieved from Facebook Artificial Intelligence: https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
 
 Tiecke, T. (2016, Novembar 15). Open population datasets and open challenges. Retrieved from Facebook Engineering: https://engineering.fb.com/connectivity/open-population-datasets-and-open-challenges/
+
+Facebook Connectivity Lab and Center for International Earth Science Information Network - CIESIN - Columbia University. 2016. High Resolution Settlement Layer (HRSL). Source imagery for HRSL © 2016 DigitalGlobe. Accessed 03 June 2020.
