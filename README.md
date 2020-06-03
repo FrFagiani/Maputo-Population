@@ -4,8 +4,11 @@ Describe population estimate method
 
 ### Data
 HRSL
+
 OSM buildings
+
 INE Census data
+
 Morphological areas
 
 ### Existing population data
