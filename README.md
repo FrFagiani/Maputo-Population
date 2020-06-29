@@ -1,27 +1,26 @@
 # Maputo-Population
 
-Describe population estimate method
+Describe the methodology adopted for estimating the population in the Greater Maputo area.
 
 ### Data
-HRSL
-
-OSM buildings
-
-INE Census data
-
-Morphological areas
+- HRSL
+- OSM buildings
+- Google buildings
+- INE Census data
+- Morphological areas
 
 ### Existing population data
-There are two main sources for population data in the Greater Maputo.
-First of all there are available dataset of *INE - Instituto Nacional de Estatistica*. Open Data of the IV General Census of Population and Housing, 2017. The main problem for the dataset is the low resolution, infact the data are aggregated per province or for district (just for Maputo city).
-The second sources is *HRSL - High Resolution Settlement Layer*. This layer is made by Facebook using AI and 2016 satellite images to identify populated areas. Resolution of 30x30 meters whether or not there is a building. Then CIENIS process this data, with data from INE 2007 applying growth rate to estimate population per HRSL pixel.
+There are two main existing sources for population data in the Greater Maputo area.
+The first one is the official census dataset provided by the *INE - Instituto Nacional de Estatistica* for the IV General Census of Population and Housing in 2017. The main problem of this dataset is the low resolution, infact the data are aggregated by province or by district.
+The second sources is *HRSL - High Resolution Settlement Layer*. This layer is developed by Facebook using AI and 2016 satellite images. It identifies populated areas with a resolution of 1 arcsec, around 30x30 meters, detecting whether there are buildings. 
+CIENIS process HRSL data and INE census data applying growth rate to estimate population per HRSL pixel.
 
 > CIESIN used proportional allocation to distribute population data from subnational census data to the settlement extents.
 (CIESIN - https://ciesin.columbia.edu/data/hrsl/)
 
 > Adjustments to match the census population with the UN estimates are applied at the national level. The UN estimate for a given country (or state/territory) is divided by the total census estimate of population for the given country. The resulting adjustment factor is multiplied by each administrative unit census value for the target year. This preserves the relative population totals across administrative units while matching the UN total.
+So the population is considered equally distributed within the HRSL pixel of the same district or province. 
 
-Also this second sources has a very low resolution considering the scale we are dealing with.
 
 <img src="img/HRSL1-tot.PNG" width=250 />
 
