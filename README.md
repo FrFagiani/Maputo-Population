@@ -38,30 +38,23 @@ Not correct boundaries (considering the working scale)
 
 ### Estimate population method
 
-Image with the result. For our work the detail of those data very useful considering HRSL (pixel 30m per 30m), but absolutely inconsistence for the population estimated. Columbia university applied census data to hrsl.
-So we developed something very similar, but considering updated CENSUS data and weighting the result in order to give more detail.
+The existing population dataset are not very effective considering the scale we are dealing with. However, the resolution of HRSL pixel is high and provide a proper measure of density, identifying weather the people lives and are concentrated. Columbia university applied census data to HRSL homogeneously. In this methodology we considered updated CENSUS data, HRSL and the actual presence of buildings.
+HRSL identify weather or not there are buildings, but It does not consider the actual number of buildings within each pixel. Surely for each HRSL pixel exist at least one building.
 
-HRSL identify wether or not there is a building. It not consider if there is just one building or many buildings inside. For sure, for one HRSL pixel exist at least one building
+For Maputo does not exist any comprehensive buildings dataset, so we used buildings from OSM and Google maps. OSM buildings are very precise, but buildings are mapped just in the inner city. Google buildings have low precision in high density areas, where the buildings are smaller and close (as in the inner city), but they covered all the metropolitan areas with higher precision in the periphery.
+We decided to estimate the population in the morphological areas, using INE census data, HRSL pixel - to have a comprehensive view of the entire metropolitan areas - and the buildings data in order to get more detail. 
 
-Consider buildings from OSM and Google maps. OSM very precise just in small areas, where they are mapped. Google low precision, but wider areas. Much more precision in periphery (exactly the opposite of OSM).
+The following items have been calculated first: 
+-	Count the number of HRSL pixel for each area.
+-	Count the number of buildings for each area. 
 
-Consider the division into morphological areas.
+We checked the reliability of the second item in order to understand the most precise sources between OSM and Google maps, or if none of them are reliable.
+The assumption is that two areas of the same morphological class have approximately the same number of buildings per HRSL pixel. Therefore, in areas where both sources are not reliable, has been applied the lowest value of buildings per HRSL pixel, measured within the same morphological classes’ areas.
 
-DENSITY: Count the number of HRSL pixel for each area. Count the number of buildings for each areas, both for OSM and Google maps sources. Manually for each area, we decided the reliability about buildings data. In some area OSM much more precise, in other Google maps, in still other none.
+In this way has been calculated the average number of buildings per HRSL pixel. This value must be higher or equal 1.
 
-DENSITY 2: Buildings/HRSL (must be >= 1). To calculate this density we used OSM buildings or Google buildings where they are reliable - correct.
-In the case where both are wrong or absents - the number of buildings is estimated as the minumum value buildings per HRSL of the same morphological class (at least 1).
-
-RESIDENTIAL BUILDINGS. Excluding of industrial buildings.
-
-Population per district from INE (2017 Census data)
-
-Buildings per district (estimated - sum of buildings from morphological area in the same district)
-
-I can easily estimate Pop / buildings.
-I can easily estimate the Pop for each area.
-
-NO, following has no sense: Can I refine the data considering average people/buildings in the district? By now has been considered homogeneous. No sense!
+There is no data about use of buildings, so no way to exclude industrial or tertiary buildings. This information is controversial in Mozambique, because often the uses are not well defined and separated. In any case the areas identifiable as industrial have been excluded (no resident).
+At this point for all the morphological areas in Greater Maputo have been calculated the number of buildings. The population have been estimated counting the number of buildings within the census administrative areas and therefore estimating the average people per buildings. Finally, this value has been multiplied for the total number of buildings in the morphological area.
 
 ## References
 Bonafilia, D., Kirsanov, D., Gill, J., & Sundram, J. (2019, April 09). Mapping the world to help aid workers, with weakly, semi-supervised learning. Retrieved from Facebook Artificial Intelligence: https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
