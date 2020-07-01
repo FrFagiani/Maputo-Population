@@ -23,12 +23,9 @@ So the population is considered equally distributed within the HRSL pixel of the
 
 Issues that affect the neighbourhood scale: 
 - data aggregated at the district or province level 
+<img src="img/HRSL1-tot.PNG" width=300 />
 - wrong overlapping with administrative boundaries
-
-<p align="center" float="center">
-<img src="img/HRSL1-tot.PNG" width=315 />
-<img src="img/HRSL1-dist1.PNG" width=250 />
-</p>
+<img src="img/HRSL1-dist1.PNG" width=300 />
 
 ### Estimate population method
 
