@@ -21,21 +21,14 @@ CIENIS process HRSL data and INE census data applying growth rate to estimate po
 > Adjustments to match the census population with the UN estimates are applied at the national level. The UN estimate for a given country (or state/territory) is divided by the total census estimate of population for the given country. The resulting adjustment factor is multiplied by each administrative unit census value for the target year. This preserves the relative population totals across administrative units while matching the UN total.
 So the population is considered equally distributed within the HRSL pixel of the same district or province. 
 
-<p align="center" float="center">
-<img src="img/HRSL1-tot.PNG" width=250 />
-</p>
-
-Moreover two problems:
+Issues that affect the neighbourhood scale: 
+- data aggregated at the district or province level 
+- wrong overlapping with administrative boundaries
 
 <p align="center" float="center">
-<img src="img/HRSL1-diff1.PNG" width=250 />
-<img src="img/HRSL1-diff2.PNG" width=250 />
-</p>
-No more resolution than INE
-<p align="center" float="center">
+<img src="img/HRSL1-tot.PNG" width=315 />
 <img src="img/HRSL1-dist1.PNG" width=250 />
 </p>
-Not correct boundaries (considering the working scale)
 
 ### Estimate population method
 
