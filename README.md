@@ -1,6 +1,6 @@
 # Greater Maputo population estimate
 
-This guide describe the methodology adopted for estimating the population in the Greater Maputo area.
+This guide describe the methodology adopted to estimate the population in the Greater Maputo area.
 
 ### Data
 - HRSL
